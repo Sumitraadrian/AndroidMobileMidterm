@@ -90,7 +90,6 @@ class FourthActivity : AppCompatActivity() {
         val backButton = findViewById<Button>(R.id.button_back)
 
         backButton.setOnClickListener {
-            // Kembali ke aktivitas sebelumnya
             finish()
         }
     }
