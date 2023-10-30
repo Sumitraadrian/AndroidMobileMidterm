@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".FifthActivity">
+
+    <!-- Judul "Order Detail" -->
+    <!-- Nama User -->
+
+    <TextView
+        android:id="@+id/orderDetailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/order_detail"
+        android:textColor="@color/orange"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/user_order"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/orderDetailTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Informasi Toko -->
+    <TextView
+        android:id="@+id/storeInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/store_city"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/order_user"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Keterangan Beli Produknya -->
+    <TextView
+        android:id="@+id/purchaseDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menus_order"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/storeInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Pengiriman -->
+    <TextView
+        android:id="@+id/deliveryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pengirman"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <!-- Checkbox "Ambil Sendiri" -->
+    <CheckBox
+        android:id="@+id/pickupCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ambil Sendiri"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"/> <!-- Mengurangi margin atas menjadi 4dp -->
+
+    <!-- Checkbox "Fast Delivery" -->
+    <CheckBox
+        android:id="@+id/fastDeliveryCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fast_delivery"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/pickupCheckbox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="2dp"
+        /> <!-- Mengurangi margin atas menjadi 4dp -->
+
+    <Button
+        android:id="@+id/button_menu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/done"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="2dp"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

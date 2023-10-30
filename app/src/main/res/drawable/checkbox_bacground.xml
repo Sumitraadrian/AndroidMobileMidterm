@@ -1,0 +1,30 @@
+<!-- res/drawable/custom_checkbox.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Latar belakang kotak -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#C4C4C4" /> <!-- Warna abu-abu latar belakang -->
+            <corners android:radius="4dp" /> <!-- Corner radius sesuai keinginan -->
+        </shape>
+    </item>
+
+    <!-- Kotak centang (checkmark) -->
+    <item android:gravity="center">
+        <selector>
+            <item android:state_checked="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#FFFFFF" /> <!-- Warna putih untuk kotak centang -->
+                    <size android:width="12dp" android:height="12dp" /> <!-- Ukuran kotak centang -->
+                    <corners android:radius="2dp" /> <!-- Corner radius kotak centang -->
+                </shape>
+            </item>
+            <item android:state_checked="false">
+                <shape android:shape="rectangle">
+                    <solid android:color="#C4C4C4" /> <!-- Warna abu-abu kotak centang -->
+                    <size android:width="12dp" android:height="12dp" /> <!-- Ukuran kotak centang -->
+                    <corners android:radius="2dp" /> <!-- Corner radius kotak centang -->
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>
