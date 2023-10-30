@@ -41,7 +41,7 @@ class ThirdActivity : AppCompatActivity() {
 
                 pizzaLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blok))
                 selectedLayout = pizzaLayout
-                selectedItem = "Pizza"
+                selectedItem = "Pepperoni pizza"
             }
             true
         }
@@ -86,7 +86,7 @@ class ThirdActivity : AppCompatActivity() {
                 intent.putExtra("selectedItem", selectedItem)
 
                 if (selectedLayout == pizzaLayout) {
-                    intent.putExtra("selectedItem", "Pizza")
+                    intent.putExtra("selectedItem", "Pepperoni pizza")
                 } else if (selectedLayout == spaghettiLayout) {
                     intent.putExtra("selectedItem", "Spaghetti")
                 } else if (selectedLayout == burgerLayout) {

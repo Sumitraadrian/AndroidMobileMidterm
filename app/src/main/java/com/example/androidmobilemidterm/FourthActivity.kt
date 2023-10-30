@@ -24,6 +24,10 @@ class FourthActivity : AppCompatActivity() {
         val selectedCity = intent.getStringExtra("selectedCity")
         val selectedItem = intent.getStringExtra("selectedItem")
         val selectedMenu = intent.getStringExtra("selectedMenu")
+        val menuItemName = intent.getStringExtra("selectedItem")
+        val menuName = findViewById<TextView>(R.id.menu_name)
+        menuName.text = menuItemName
+
 
         val menuImage = findViewById<ImageView>(R.id.menu_image)
         val priceTag = findViewById<TextView>(R.id.price_tag)
@@ -53,6 +57,7 @@ class FourthActivity : AppCompatActivity() {
                 menuImage.setImageResource(R.drawable.main_pizza)
                 priceTag.text = pizzaPrice
                 pizzaDesc.text = pizzaDescription
+
             }
             "Spaghetti" -> {
                 menuImage.setImageResource(R.drawable.spaghetti_label)
