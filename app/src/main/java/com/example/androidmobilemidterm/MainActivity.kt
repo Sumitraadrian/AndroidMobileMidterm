@@ -3,7 +3,6 @@ package com.example.androidmobilemidterm
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -27,19 +26,19 @@ class MainActivity : AppCompatActivity() {
         val nameInputLayout = findViewById<TextInputLayout>(R.id.name_input)
         val nameInputText = findViewById<TextInputEditText>(R.id.name_input_text)
 
-// Simpan hint awal dalam variabel
+
         val initialHint = nameInputLayout.hint
 
-// Atur hint pada TextInputLayout dan EditText ke awal
+
         nameInputLayout.hint = initialHint
         nameInputText.hint = initialHint
 
         nameInputText.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
-                // Ketika kotak isian mendapatkan fokus, hilangkan hint
+
                 nameInputLayout.hint = ""
             } else {
-                // Ketika kotak isian kehilangan fokus, kembalikan hint awal
+
                 nameInputLayout.hint = initialHint
             }
         }
@@ -60,10 +59,10 @@ class MainActivity : AppCompatActivity() {
             val nameInputLayout = findViewById<TextInputLayout>(R.id.name_input)
 
             if (enteredName.isEmpty()) {
-                // Nama kosong, set error message
+                // Jika nama kosong, set error message
                 nameInputLayout.error = "Nama harus diisi"
             } else {
-                // Nama diisi, clear error message and proceed
+                // Jika nama diisi, clear error message and proceed
                 nameInputLayout.error = null
 
                 val intent = Intent(this, SecondActivity::class.java)
@@ -72,11 +71,5 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
-
-
-
     }
-
-
 }

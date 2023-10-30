@@ -5,4 +5,6 @@
     <color name="orange">#733F0E</color>
     <color name="red">#D52F2F</color>
     <color name="statusBarColor">#D52F2F</color>
+    <color name="notif">#733F0E</color>
+    <color name="blok">#FFE0E0</color>
 </resources>

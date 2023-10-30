@@ -31,9 +31,6 @@
     <string name="toast_spaghetti">You choose Spaghetti</string>
     <string name="toast_burger">You choose Burger</string>
     <string name="toast_steak">You choose Steak</string>
-
-
-
     <string-array name="kota">
         <item>Cibiru</item>
         <item>Buah Batu</item>
@@ -44,10 +41,8 @@
 
     <string name="pepperoni_banner">Pepperoni banner</string>
     <string name="title_activity_third">ThirdActivity</string>
-    <string name="price_rp_66_000_00">Price: Rp. 66.000,00</string>
     <string name="back">Back</string>
     <string name="order_now">Order Now</string>
-    <string name="pepperoni_desk">Pepperoni pizza adalah pizza yang memiliki topping daging pepperoni sapi asli. Di Italia, pepperoni disebut salame piccante (salami panas). Biasa menjadi bahan baku pizza di Amerika Serikat, yang sering mewakili 30% pelengkap. Pizza ini cocok untuk santap siang ataupun malam anda</string>
     <string name="pizza_harga">Prize: Rp. 66.000,00</string>
     <string name="order_detail">Order Detail</string>
     <string name="user_order">user</string>
@@ -57,5 +52,20 @@
     <string name="ambil_sendiri">Ambil Sendiri</string>
     <string name="done">Done</string>
     <string name="fast_delivery">Fast Delivery (minimal 30 menit sampai)</string>
+    <string name="terima_kasih">Terima Kasih</string>
+
+    <string name="spaghetti_name">Spaghetti</string>
+    <string name="burger_name">Burger</string>
+    <string name="steak_name">Steak</string>
+
+    <string name="price_rp_66_000_00">Price: Rp. 66.000,00</string>
+    <string name="spaghetti_price">Price: Rp. 30.000,00</string>
+    <string name="burger_price">Price: RP. 25.000,00</string>
+    <string name="steak_price">Price: RP. 110.000,00</string>
+
+    <string name="pepperoni_desk">Pepperoni pizza adalah pizza yang memiliki topping daging pepperoni sapi asli. Di Italia, pepperoni disebut salame piccante (salami panas). Biasa menjadi bahan baku pizza di Amerika Serikat, yang sering mewakili 30% pelengkap. Pizza ini cocok untuk santap siang ataupun malam anda</string>
+    <string name="spaghetti_description">Spaghetti adalah hidangan pasta yang klasik, terdiri dari mie tipis panjang yang biasanya disajikan dengan berbagai jenis saus. Saat disajikan dengan saus tomat dan daging cincang, spaghetti menjadi hidangan yang menggugah selera. Namun, fleksibilitasnya juga memungkinkan variasi lain seperti saus krim, saus pesto, atau campuran berbagai bahan tambahan sesuai selera Anda.</string>
+    <string name="burger_description">Burger adalah ikon makanan cepat saji yang tak lekang oleh waktu. Hidangan ini terdiri dari patty daging (biasanya sapi) yang dimasak dengan berbagai tingkat kematangan, ditempatkan di antara roti bundar. Patty ini sering kali disajikan dengan berbagai tambahan seperti selada, tomat, keju, dan beragam saus yang memikat. Rasanya yang gurih dan berlimpah menjadikan burger pilihan favorit bagi banyak orang di seluruh dunia.</string>
+    <string name="steak_description">Steak adalah hidangan yang memanjakan pencinta daging. Potongan daging sapi yang tebal ini dipanggang atau digoreng sesuai dengan tingkat kematangan yang diinginkan, mulai dari rare hingga well-done. Dengan citarasa gurih yang khas dan kelembutan dagingnya, steak sering disajikan dengan saus dan tambahan seperti kentang, sayuran, atau bawang yang memadukan kelezatan sempurna dalam setiap gigitannya.</string>
 
 </resources>

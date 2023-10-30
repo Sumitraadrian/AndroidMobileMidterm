@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Toast
 
 class ThirdActivity : AppCompatActivity() {
@@ -21,42 +21,85 @@ class ThirdActivity : AppCompatActivity() {
         val intent: Intent = intent
         val enteredName = intent.getStringExtra("enteredName")
         val selectedCity = intent.getStringExtra("selectedCity")
-
         val textViewName = findViewById<TextView>(R.id.user)
-        val pizzaIcon = findViewById<ImageView>(R.id.pizza_icon)
-        val spaghettiIcon = findViewById<ImageView>(R.id.spaghetti_icon)
-        val burgerIcon = findViewById<ImageView>(R.id.burger_icon)
-        val steakIcon = findViewById<ImageView>(R.id.steak_icon)
-
         textViewName.text = "Hello, $enteredName"
+
         val fab = findViewById<FloatingActionButton>(R.id.fab_icon)
 
-        pizzaIcon.setOnClickListener {
-            val message = getString(R.string.toast_pepperoni_pizza)
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+        val pizzaLayout = findViewById<LinearLayout>(R.id.pizzaLayout)
+        val spaghettiLayout = findViewById<LinearLayout>(R.id.spaghettiLayout)
+        val burgerLayout = findViewById<LinearLayout>(R.id.burgerLayout)
+        val steakLayout = findViewById<LinearLayout>(R.id.steakLayout)
+
+        var selectedLayout: LinearLayout? = null
+        var selectedItem: String? = null
+
+        pizzaLayout.setOnLongClickListener {
+            if (selectedLayout != pizzaLayout) {
+                selectedLayout?.setBackgroundColor(ContextCompat.getColor(this, android.R.color.transparent))
+
+                pizzaLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blok))
+                selectedLayout = pizzaLayout
+                selectedItem = "Pizza"
+            }
+            true
         }
 
-        spaghettiIcon.setOnClickListener {
-            val message = getString(R.string.toast_spaghetti)
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        spaghettiLayout.setOnLongClickListener {
+            if (selectedLayout != spaghettiLayout) {
+                selectedLayout?.setBackgroundColor(ContextCompat.getColor(this, android.R.color.transparent))
+
+                spaghettiLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blok))
+                selectedLayout = spaghettiLayout
+                selectedItem = "Spaghetti"
+            }
+            true
         }
 
-        burgerIcon.setOnClickListener {
-            val message = getString(R.string.toast_burger)
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        burgerLayout.setOnLongClickListener {
+            if (selectedLayout != burgerLayout) {
+                selectedLayout?.setBackgroundColor(ContextCompat.getColor(this, android.R.color.transparent))
+
+                burgerLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blok))
+                selectedLayout = burgerLayout
+                selectedItem = "Burger"
+            }
+            true
         }
 
-        steakIcon.setOnClickListener {
-            val message = getString(R.string.toast_steak)
-            Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-        }
+        steakLayout.setOnLongClickListener {
+            if (selectedLayout != steakLayout) {
+                selectedLayout?.setBackgroundColor(ContextCompat.getColor(this, android.R.color.transparent))
 
+                steakLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.blok))
+                selectedLayout = steakLayout
+                selectedItem = "Steak"
+            }
+            true
+        }
         fab.setOnClickListener {
-            // Pindah ke FourthActivity
-            val intent = Intent(this, FourthActivity::class.java)
-            intent.putExtra("selectedCity", selectedCity)
-            intent.putExtra("enteredName", enteredName)
-            startActivity(intent)
+            if (selectedLayout != null) {
+                val intent = Intent(this, FourthActivity::class.java)
+                intent.putExtra("selectedCity", selectedCity)
+                intent.putExtra("enteredName", enteredName)
+                intent.putExtra("selectedItem", selectedItem)
+
+                if (selectedLayout == pizzaLayout) {
+                    intent.putExtra("selectedItem", "Pizza")
+                } else if (selectedLayout == spaghettiLayout) {
+                    intent.putExtra("selectedItem", "Spaghetti")
+                } else if (selectedLayout == burgerLayout) {
+                    intent.putExtra("selectedItem", "Burger")
+                } else if (selectedLayout == steakLayout) {
+                    intent.putExtra("selectedItem", "Steak")
+                }
+
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Long press to choose menu", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
+

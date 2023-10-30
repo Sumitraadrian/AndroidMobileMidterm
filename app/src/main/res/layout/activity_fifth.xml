@@ -8,9 +8,6 @@
     android:padding="24dp"
     tools:context=".FifthActivity">
 
-    <!-- Judul "Order Detail" -->
-    <!-- Nama User -->
-
     <TextView
         android:id="@+id/orderDetailTitle"
         android:layout_width="match_parent"
@@ -36,7 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <!-- Informasi Toko -->
     <TextView
         android:id="@+id/storeInfo"
         android:layout_width="match_parent"
@@ -48,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="8dp"/>
 
-    <!-- Keterangan Beli Produknya -->
+
     <TextView
         android:id="@+id/purchaseDescription"
         android:layout_width="match_parent"
@@ -60,7 +56,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="8dp"/>
 
-    <!-- Pengiriman -->
+
     <TextView
         android:id="@+id/deliveryTitle"
         android:layout_width="match_parent"
@@ -73,7 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="30dp"/>
 
-    <!-- Checkbox "Ambil Sendiri" -->
+
     <CheckBox
         android:id="@+id/pickupCheckbox"
         android:layout_width="match_parent"
@@ -83,9 +79,9 @@
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/deliveryTitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="4dp"/> <!-- Mengurangi margin atas menjadi 4dp -->
+        android:layout_marginTop="4dp"/>
 
-    <!-- Checkbox "Fast Delivery" -->
+
     <CheckBox
         android:id="@+id/fastDeliveryCheckbox"
         android:layout_width="match_parent"
@@ -95,8 +91,7 @@
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/pickupCheckbox"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="2dp"
-        /> <!-- Mengurangi margin atas menjadi 4dp -->
+        android:layout_marginTop="2dp" />
 
     <Button
         android:id="@+id/button_menu"
@@ -107,6 +102,30 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:cornerRadius="2dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="40dp"/>
+
+    <LinearLayout
+        android:id="@+id/notif_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/rectangles"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="7dp">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:gravity="center"
+            android:text="@string/terima_kasih"
+            android:textColor="@color/notif"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 </LinearLayout>
