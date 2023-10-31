@@ -6,4 +6,4 @@ Diajukan sebagai memenuhi tugas Ujian Tengah Semester Mata Kuliah Praktikum Peng
 - Kelas: A
 
   ## Tampilan aplikasi
-  <img src="Screenshoot/tampilan-awal.jpg">
+  <img src="Screenshoot/tampilan.gif">
