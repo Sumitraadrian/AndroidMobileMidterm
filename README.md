@@ -4,3 +4,6 @@ Diajukan sebagai memenuhi tugas Ujian Tengah Semester Mata Kuliah Praktikum Peng
 - Nama: Sumitra Adriansyah
 - NIM : 1217050137
 - Kelas: A
+
+- Tampilan Aplikasi
+  <img src="Screenshoot/tampilan.gif">
