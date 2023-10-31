@@ -5,5 +5,4 @@ Diajukan sebagai memenuhi tugas Ujian Tengah Semester Mata Kuliah Praktikum Peng
 - NIM : 1217050137
 - Kelas: A
 
-  ## Tampilan aplikasi
-  <img src="Screenshoot/tampilan.gif">
+ 
